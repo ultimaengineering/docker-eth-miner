@@ -13,11 +13,16 @@ RUN apt-get install -y git \
      g++-7 \
      libdbus-1-dev
 
+RUN git config --global user.email "evaderxander@gmail.com"
+RUN git config --global user.name "A man"
+
 # Git repo set up
 RUN git clone https://github.com/ethereum-mining/ethminer.git; \
     cd ethminer; \
     git checkout tags/v0.19.0; \
-    git submodule update --init --recursive
+    git submodule update --init --recursive; \
+    git fetch origin 47348022be371df97ed1d8535bcb3969a085f60a; \
+    git cherry-pick 47348022be371df97ed1d8535bcb3969a085f60a
 
 RUN 
 # Build
