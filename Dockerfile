@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.4.1-runtime-ubuntu18.04
+FROM nvidia/cuda:11.4.2-cudnn8-devel-ubuntu20.04
 
 WORKDIR /
 
