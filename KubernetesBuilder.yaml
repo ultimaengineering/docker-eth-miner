@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    some-label: builder
+spec:
+  containers:
+    - name: kaniko
+      workingDir: /tmp/jenkins
+      image: gcr.io/kaniko-project/executor:debug
+      imagePullPolicy: Always
+      capabilities:
+        add: ["IPC_LOCK"]
+      command:
+        - /busybox/cat
+      tty: true
