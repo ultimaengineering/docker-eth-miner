@@ -9,6 +9,7 @@ RUN apt-get update \
     && apt-get update \
     && apt-get install -y git \
      cmake \
+     libcurl4-openssl-dev \
      libleveldb-dev \
      libjsoncpp-dev \
      libjsonrpccpp-dev \
