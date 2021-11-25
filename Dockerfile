@@ -2,7 +2,6 @@ FROM nvidia/cuda:9.2-cudnn7-devel-ubi7
 
 WORKDIR /
 ENV DEBIAN_FRONTEND="noninteractive" TZ="Europe/London"
-# Package and dependency setup
 RUN apt-get update && apt-get -y install software-properties-common && add-apt-repository -y ppa:ethereum/ethereum -y && apt-get update
 RUN apt-get install -y git \
      cmake \
