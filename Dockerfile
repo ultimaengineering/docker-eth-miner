@@ -24,7 +24,7 @@ RUN git clone https://github.com/ethereum-mining/ethminer.git; \
     git fetch origin 47348022be371df97ed1d8535bcb3969a085f60a; \
     git cherry-pick 47348022be371df97ed1d8535bcb3969a085f60a
 
-RUN 
+ENV DEBIAN_FRONTEND=noninteractive
 # Build
 RUN cd ethminer; \
     mkdir build; \
