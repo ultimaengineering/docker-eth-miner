@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND="noninteractive" TZ="Europe/London"
 RUN apt-get update && apt-get -y install software-properties-common && add-apt-repository -y ppa:ethereum/ethereum -y && apt-get update
 RUN apt-get install -y git \
      cmake \
+     curl \
      build-essential \
      libssl-dev \
      perl \
