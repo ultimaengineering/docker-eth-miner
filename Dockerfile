@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.2-cudnn7-devel-ubi7
+FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu14.04
 
 WORKDIR /
 ENV DEBIAN_FRONTEND="noninteractive" TZ="Europe/London"
